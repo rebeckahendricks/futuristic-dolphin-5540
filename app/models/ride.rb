@@ -1,7 +1,6 @@
 class Ride < ApplicationRecord
   validates :name, presence: true
   validates :thrill_rating, presence: true
-  validates :open, presence: true
 
   belongs_to :amusement_park
 
