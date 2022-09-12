@@ -37,11 +37,11 @@ RSpec.describe 'Mechanic Show Page' do
 
       it 'I only see rides that are open' do
         visit "/mechanics/#{@mechanic1.id}"
-
+        save_and_open_page
         expect(page).to have_content(@hurler.name)
         expect(page).to have_content(@scrambler.name)
         expect(page).to have_content(@coaster1.name)
-        
+
         expect(page).to_not have_content(@ferris.name)
         expect(page).to_not have_content(@coaster2.name)
       end
