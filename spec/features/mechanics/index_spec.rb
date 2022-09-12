@@ -2,9 +2,9 @@ require 'rails_helper'
 
 RSpec.describe 'Mechanic Index Page' do
   before :each do
-    @mechanic1 = Mechanic.new(name: "Cooter Davenport", years_experience: 25)
-    @mechanic2 = Mechanic.new(name: "Fonzie", years_experience: 18)
-    @mechanic3 = Mechanic.new(name: "Chewbacca", years_experience: 101)
+    @mechanic1 = Mechanic.create!(name: "Cooter Davenport", years_experience: 25)
+    @mechanic2 = Mechanic.create!(name: "Fonzie", years_experience: 18)
+    @mechanic3 = Mechanic.create!(name: "Chewbacca", years_experience: 101)
   end
   describe 'As a user' do
     describe 'When I visit the mechanics index page' do
