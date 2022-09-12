@@ -31,16 +31,16 @@ RSpec.describe 'Add a Ride to a Mechanic' do
       it 'I am taken back to that mechanics show page' do
         visit "/mechanics/#{@mechanic1.id}"
 
-        fill_in 'ride_id', with: "#{@coaster1.id}"
+        fill_in 'add_ride', with: "#{@coaster1.id}"
         click_button 'Submit'
 
-        expect(current_path).to eq("/mechanics/#{@mechanic1.id}")
+        expect(current_path).to eq("/mechanics/#{@mechanic1.id}/")
       end
 
       it 'I see the name of that newly added ride on this mechanics show page' do
         visit "/mechanics/#{@mechanic1.id}"
 
-        fill_in 'ride_id', with: "#{@coaster1.id}"
+        fill_in 'add_ride', with: "#{@coaster1.id}"
         click_button 'Submit'
 
         expect(page).to have_content(@hurler.name)
