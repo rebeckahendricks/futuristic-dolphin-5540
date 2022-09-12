@@ -34,5 +34,17 @@ RSpec.describe Ride, type: :model do
         expect(Ride.order_by_most_thrills).to eq([@coaster2, @coaster1, @hurler, @ferris, @scrambler])
       end
     end
+
+    describe '.order_by_name' do
+      it 'can order an amusement parks rides alphabetically' do
+        expect(Ride.order(:name)).to eq([@ferris, @coaster2, @coaster1, @hurler, @scrambler])
+      end
+    end
+
+    describe '.average_thrill_rating' do
+      it 'can calculate the average thrill rating of an amusement parks rides' do
+        expect(Ride.average_thrill_rating).to eq(7)
+      end
+    end
   end
 end
