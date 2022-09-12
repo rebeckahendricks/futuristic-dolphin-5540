@@ -10,3 +10,4 @@ RSpec.describe RideMechanic, type: :model do
     it { should validate_presence_of(:ride_id) }
     it { should validate_presence_of(:mechanic_id) }
   end
+end
